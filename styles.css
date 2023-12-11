@@ -1,0 +1,60 @@
+body {
+    background-color: #f8f9fa; /* สีพื้นหลัง */
+    font-family: 'Arial', sans-serif; /* ปรับแบบอักษร */
+    margin: 0;
+    padding: 0;
+}
+
+.alert-dark {
+    background-color: #343a40; /* สีพื้นหลังของเฮดเดอร์ */
+    color: #fff; /* สีข้อความ */
+}
+
+.body2 {
+    margin: 20px; /* ระยะห่างขอบหน้าจอ */
+}
+
+.pd1 {
+    padding: 20px; /* การเพิ่ม Padding ในเฮดเดอร์ */
+}
+
+.t1, .t2, .t3 {
+    margin: 0; /* กำหนด Margin เพื่อลดระยะห่างระหว่างข้อความ */
+}
+
+.t2 a {
+    color: #007bff; /* สีลิงค์ */
+    text-decoration: none;
+}
+
+.t2 a:hover {
+    text-decoration: underline; /* เพิ่มเส้นใต้เมื่อโฮเวอร์ลิงค์ */
+}
+
+.p1 {
+    background-color: #ffffff; /* สีพื้นหลังของโปรไฟล์ */
+    padding: 20px;
+    border-radius: 10px; /* ทำให้มีมุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.pt1, .pt2 {
+    margin: 0; /* กำหนด Margin เพื่อลดระยะห่างระหว่างข้อความ */
+}
+
+.pt2 img {
+    border-radius: 50%; /* ทำให้รูปภาพมีรูปร่างวงกลม */
+    margin-top: 10px; /* ระยะห่างด้านบนของรูปภาพ */
+}
+.pt1 {
+    text-align: center; /* ทำให้ข้อความยุตรงกลาง */
+}
+
+.pt2 {
+    text-align: center; /* ทำให้ข้อความยุตรงกลาง */
+}
+
+.pt2 img {
+    display: block; /* ทำให้รูปภาพอยู่กลาง */
+    margin: 0 auto; /* ทำให้รูปภาพอยู่กลางแนวนอน */
+}

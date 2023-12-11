@@ -1,0 +1,65 @@
+#view2 .col {
+    padding: 2px;
+}
+
+#view2 .col img {
+    width: 100%;
+
+}
+@font-face {
+    font-family: Minecraft;
+    src: url(1_Minecraft-Regular.otf);
+}
+*{
+    font-family: Minecraft;
+}
+.btn-minecraft {
+    background: #4CAF50; /* สีเขียว */
+    color: #fff; /* สีขาว */
+    width: 30%; /* ปรับขนาดของปุ่มให้มีขนาดใหญ่ขึ้น */
+    padding: 1rem; /* ปรับระยะห่างของข้อความภายในปุ่ม */
+    margin-bottom: 1.5rem; /* ปรับระยะห่างของปุ่มล่าง */
+    font-size: 1.5rem; /* ปรับขนาดตัวอักษรในปุ่มให้ใหญ่ขึ้น */
+    letter-spacing: .05rem; /* ปรับระยะห่างระหว่างตัวอักษร */
+    border: 2px solid #4CAF50; /* สีเขียว */
+    border-radius: 10px; /* ปรับมุมของปุ่มให้มีรูปร่างที่มนเหมือนกัน */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนสีมีอนิเมชัน */
+}
+
+.btn-minecraft:hover {
+    background: #45a049; /* เขียวเข้มขึ้นเมื่อโฮเวอร์ */
+    border-color: #45a049; /* เขียวเข้มขึ้นเมื่อโฮเวอร์ */
+    color: yellow; /* สีเหลือง */
+}
+bn 
+
+
+.text-minecraft{
+    background: #727272;
+    color: rgb(247, 247, 247);
+    width: 100%;
+    padding: .5rem 0;
+    margin-bottom: .75rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    font-size: 1.25rem;
+    letter-spacing: .025rem;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: inset 3px 3px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 0 rgba(0, 0, 0, 0.5);
+}
+pre {
+    white-space: pre-wrap;
+    font-family: 'Minecraft'
+}
+
+body {
+    background-image: url('src/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.box {
+    padding-top: 10%;
+}
