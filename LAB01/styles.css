@@ -40,7 +40,7 @@ bn
     width: 100%;
     padding: .5rem 0;
     margin-bottom: .75rem;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 0 rgba(134, 214, 28, 0.8);
     font-size: 1.25rem;
     letter-spacing: .025rem;
     border: 2px solid rgba(0, 0, 0, 1);
@@ -62,4 +62,14 @@ body {
 
 .box {
     padding-top: 10%;
+}
+#view4 {
+    background-color: rgba(246, 246, 246, 0.8); /* สีพื้นหลัง */
+    border-radius: 10px; /* มุมของพื้นหลัง */
+    padding: 20px; /* ระยะห่างของเนื้อหาทั้งหมดภายในพื้นหลัง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+#view4 h1, #view4 pre, #backBtn {
+    margin-bottom: 20px; /* ระยะห่างด้านล่างของข้อความและปุ่ม */
 }
