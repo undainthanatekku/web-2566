@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="view" src="work2/view360.jpg">
+      <img id="me" src="work2/me.jpg">
+      <a-asset-item id="camel" src="work2/camel.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-text value="Work 2" position="0 -5 -2.2"
+      animation="property: position; to: 0 1.5 -2.2; dur: 2000; easing: linear; loop: false"></a-text>
+    <a-text value="Unda Inthanate 643020659-1" position="-5 5 -2"
+      animation="property: position; to: -1 1 -2.2; dur: 8000; easing: linear; loop: false"></a-text>
+
+    <a-sky color="#ECFFFF" src="#view" radius="651"></a-sky>
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+
+    <a-box position="0 0 0" width="1" height="1" animation="property: position; to: 0 1 -5; dur: 2000; easing: linear"
+      animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" src="#me"></a-box>
+
+    <!-- ให้โมเดล .gltf เดินและหายไปทันทีหลังจากที่ฉากโหลดเสร็จ -->
+    <a-gltf-model src="#camel" position="-10 0.75 -10" aframe-extras-anim__position="property: position; to: 2 1 1; dur: 10000; easing: linear; loop: true;"
+      aframe-extras-anim__rotation="property: rotation; to: 0 90 90; dur: 500; loop: true;"></a-gltf-model>
+
+    <!-- เปิดใช้งาน animation-mixer ของ aframe-extras -->
+    <a-entity animation-mixer="clip: *; loop: repeat" begin="camel-entity-animation"></a-entity>
+
+    <!-- ให้โมเดลเดินและหายไป -->
+    <a-animation attribute="position" to="2 1 1" dur="10000" easing="linear" begin="camel-entity-animation"></a-animation>
+    <!-- ให้ animation-mixer เปลี่ยนทิศทางของโมเดล -->
+    <a-animation attribute="rotation" to="0 90 90" dur="500" easing="linear" begin="camel-entity-animation"></a-animation>
+
+    <!-- เรียกใช้งาน animation ทันทีหลังจากที่โมเดล .gltf โหลดเสร็จ -->
+    <script>
+      AFRAME.registerComponent('onload-move', {
+        init: function () {
+          var camelEntity = document.querySelector('a-gltf-model');
+          camelEntity.emit('camel-entity-animation'); // ส่งอีเวนท์เพื่อเริ่มทำงาน animation
+        }
+      });
+    </script>
+    <a-entity onload-move></a-entity>
+  </a-scene>
+</body>
+
+</html>
